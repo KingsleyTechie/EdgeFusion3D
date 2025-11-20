@@ -1,0 +1,14 @@
+from edgefusion.utils import VoxelDataset
+from torch.utils.data import DataLoader
+
+# Prepare dataset
+dataset = VoxelDataset(file_paths, grid_size=32)
+dataloader = DataLoader(dataset, batch_size=4, shuffle=True)
+
+# Training loop
+optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
+loss_fn = torch.nn.MSELoss()
+
+for epoch in range(num_epochs):
+    for batch in dataloader:
+        loss = trainer.train_step(batch, optimizer, loss_fn)
