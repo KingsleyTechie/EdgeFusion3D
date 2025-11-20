@@ -1,0 +1,31 @@
+
+## 7. Test Files
+
+**tests/test_diffusion.py**
+```python
+import torch
+import pytest
+from edgefusion.core.diffusion import DiffusionTrainer
+from edgefusion.core.unet_3d import Simple3DUNet
+
+class TestDiffusion:
+    def test_forward_diffusion(self):
+        model = Simple3DUNet(in_channels=1, base_channels=8)
+        trainer = DiffusionTrainer(model, timesteps=100)
+        
+        x0 = torch.randn(1, 1, 16, 16, 16)
+        t = torch.tensor([50])
+        
+        x_t, noise = trainer.forward_diffusion(x0, t)
+        
+        assert x_t.shape == x0.shape
+        assert noise.shape == x0.shape
+    
+    def test_model_initialization(self):
+        model = Simple3DUNet(in_channels=1, base_channels=8)
+        assert model is not None
+        
+        # Test forward pass
+        x = torch.randn(1, 1, 32, 32, 32)
+        output = model(x)
+        assert output.shape == x.shape
