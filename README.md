@@ -10,3 +10,8 @@ Key Features:
 • Comprehensive evaluation metrics and benchmarks
 
 Applications: Mobile AR/VR, Real-time 3D Design Tools, Edge AI Systems, Embedded 3D Visualization
+
+3d-generation, diffusion-models, edge-computing, model-compression, efficient-ai, 
+tinyML, 3d-ai, model-optimization, computer-vision, deep-learning, 
+edge-ai, mobile-ai, 3d-diffusion, neural-networks, ai-optimization,
+pruning, quantization, edge-devices, real-time-ai, 3d-vision
