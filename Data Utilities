@@ -1,0 +1,7 @@
+from edgefusion.utils import VoxelDataset, plot_3d_voxels
+
+# Dataset
+dataset = VoxelDataset(file_paths, grid_size=32)
+
+# Visualization
+fig = plot_3d_voxels(voxel_grid, threshold=0.5)
