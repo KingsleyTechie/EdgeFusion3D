@@ -1,0 +1,10 @@
+from edgefusion.optimization import apply_manual_pruning, simulate_quantization
+
+# Load pre-trained model
+model = Simple3DUNet(in_channels=1, base_channels=16)
+
+# Apply optimizations
+pruned_model, stats = apply_manual_pruning(model, pruning_threshold=0.02)
+quantized_model = simulate_quantization(pruned_model, bits=8)
+
+print(f"Pruned {stats['pruning_ratio']:.1%} of parameters")
