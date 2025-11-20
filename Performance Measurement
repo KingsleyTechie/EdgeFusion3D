@@ -1,0 +1,4 @@
+from edgefusion.optimization.quantization import measure_model_size
+
+model_size = measure_model_size(model)
+print(f"Model size: {model_size:.2f} MB")
