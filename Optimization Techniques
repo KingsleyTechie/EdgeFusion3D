@@ -1,0 +1,7 @@
+from edgefusion.optimization import apply_manual_pruning, simulate_quantization
+
+# Pruning
+pruned_model, stats = apply_manual_pruning(model, pruning_threshold=0.02)
+
+# Quantization
+quantized_model = simulate_quantization(model, bits=8)
