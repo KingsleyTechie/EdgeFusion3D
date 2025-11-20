@@ -1,0 +1,55 @@
+EdgeFusion/
+│
+├── .github/
+│   └── workflows/
+│       └── python-package.yml
+│
+├── edgefusion/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── diffusion.py
+│   │   ├── unet_3d.py
+│   │   └── trainer.py
+│   ├── optimization/
+│   │   ├── __init__.py
+│   │   ├── pruning.py
+│   │   ├── quantization.py
+│   │   └── architecture.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── data_loader.py
+│       └── visualization.py
+│
+├── experiments/
+│   ├── baseline_training.ipynb
+│   ├── optimization_study.ipynb
+│   └── performance_benchmark.ipynb
+│
+├── docs/
+│   ├── API.md
+│   ├── deployment.md
+│   └── examples.md
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_diffusion.py
+│   └── test_optimization.py
+│
+├── assets/
+│   ├── edgefusion_performance_comparison.png
+│   ├── edgefusion_optimization_analysis.png
+│   ├── edgefusion_performance_table.png
+│   └── edgefusion_techniques_table.png
+│
+├── data/
+│   └── sample/
+│       └── sample_config.yaml
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── setup.py
+├── pyproject.toml
+└── CITATION.cff
